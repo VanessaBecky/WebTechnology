@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+    <title>Amavuna Attendance</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="assets/img/auca.png" rel="icon"/>
+        <link href="assets/img/auca.png" rel="apple-touch-icon"/>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet"/>
+  </head>
+
+  <body class="text-center bg-info">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Amavuna Attendance</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="home.xhtml">Home</a>
+            <a class="nav-link active" href="#">View attendance</a>
+            <h:form>
+                <h:commandLink class="nav-link" value="Logout" action="#{mr.logout}"/>
+            </h:form>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+          <h1 class="cover-heading">#{mr.profile.username}</h1>
+          <h:dataTable class="table table-hover" var="a" value="#{mr.attendanceList}">
+              <h:column>#{a.attendanceDate}
+                  <f:facet name="header">Date</f:facet>
+              </h:column>
+              <h:column>#{a.script}
+                  <f:facet name="header">Script</f:facet>
+              </h:column>
+              <h:column>#{a.attend}
+                  <f:facet name="header">Attend</f:facet>
+              </h:column>
+        </h:dataTable>
+        
+        
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Masoro Campus, Kigali</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>
+        //<![CDATA[
+        window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>');
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+        //]]>
+    </script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+  
+
+</body></html>
+

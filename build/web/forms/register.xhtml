@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Amavuna Attendance</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link href="assets/img/auca.png" rel="icon"/>
+        <link href="assets/img/auca.png" rel="apple-touch-icon"/>
+    </h:head>
+    <h:body style="background-image: url(assets/img/bgbody.jpg); background-size: cover;">
+        <div class="container w-25 mt-5 bg-info text-white" style="height:600px;">
+                <h2 class="text-center p-3 pt-5">SIGNUP FORM</h2>
+                <h:messages/>
+                <h:form>
+                    <div class="form-group">
+                        <h:outputLabel>Username </h:outputLabel><br/>
+                        <h:inputText class="form-control" value="" label="Username" required="true"
+                                     requiredMessage="Username can't be null"/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel>Password </h:outputLabel><br/>
+                        <h:inputSecret class="form-control" value="" label="Password"/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel>Confirm Password </h:outputLabel><br/>
+                        <h:inputSecret class="form-control" value="" label="Password"/>
+                    </div>
+                    <div class="form-group">
+                        <h:link value="Login instead" class="text-warning" outcome="login"/>
+                    </div>
+                    <div class="col-12 text-center">
+                        <h:commandButton class="btn btn-primary" value="Register"/>
+                    </div>
+                </h:form>
+            </div>
+    </h:body>
+</html>

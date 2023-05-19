@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Amavuna Attendance</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link href="assets/img/auca.png" rel="icon"/>
+        <link href="assets/img/auca.png" rel="apple-touch-icon"/>
+    </h:head>
+    <h:body>
+        <div class="container-fluid">
+    <h1>Basic</h1>
+    <p:tabMenu activeIndex="#{param.i}">
+        <p:menuitem value="Home" outcome="tabMenu" icon="pi pi-fw pi-home">
+            <f:param name="i" value="0"/>
+        </p:menuitem>
+        <p:menuitem value="Calendar" outcome="tabMenu" icon="pi pi-fw pi-calendar">
+            <f:param name="i" value="1"/>
+        </p:menuitem>
+        <p:menuitem value="Edit" outcome="tabMenu" icon="pi pi-fw pi-pencil"
+                    disabled="true">
+            <f:param name="i" value="2"/>
+        </p:menuitem>
+        <p:menuitem value="Documentation" outcome="tabMenu" icon="pi pi-fw pi-file">
+            <f:param name="i" value="3"/>
+        </p:menuitem>
+        <p:menuitem value="Settings" outcome="tabMenu" icon="pi pi-fw pi-cog">
+            <f:param name="i" value="4"/>
+        </p:menuitem>
+    </p:tabMenu>
+</div>
+    </h:body>
+</html>
